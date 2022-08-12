@@ -7,23 +7,26 @@
   <header>
     <%-include('./partials/nav.ejs')%>
   </header>
-<div class = 'imgBack'>
   <h1><%=item.name%></h1>
-  <img src="<%=item.img%>" alt="<%= item.name %>" class ='imgShow'>
-  <h3>Style: <%=item.style%></h3>
-  <p>Size: <%=item.size%></p>
-  <h3>Price: $<%=item.price%></h3>
-  <% for (let i=0; i < item.tags.length; i++ ) { %>
-    <p>Tags: <a href = ''><%=item.tags[i]%></a><p>
-  <%  } %>
+  <div class ='showContainer'>
+  <div ='insideContainer'>
+    <img src="<%=item.img%>" alt="<%= item.name %>" class ='imgShow'>
+  </div>
+  <div class='insideContainer'>
+    <h3 class='showStat'>Style: <%=item.style%></h3>
+    <p class='showStat'>Size: <%=item.size%></p>
+    <h3 class='showStat'>Price: $<%=item.price%></h3>
+    <% for (let i=0; i < item.tags.length; i++ ) { %>
+      <p class='showStat'>Tags: <a href = '<%=[i]%>'><%=item.tags[i]%></a><p>
+      <%  } %>
 
-  <a href='/edit/<%=item._id%>'>edit this item</a>
+      <a href='/edit/<%=item._id%>' class='showStat'>edit this item</a>
 
-  <form action="<%=item.id%>?_method=DELETE" method="post">
-    <input type='submit' value ='DELETE ITEM'>
-  </form>
-</div>
-
+      <form action="<%=item.id%>?_method=DELETE" method="post" class='showStat'>
+      <input type='submit' value ='DELETE ITEM'>
+      </form>
+    </div>
+  </div>
 
 
 </body>

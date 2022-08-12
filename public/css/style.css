@@ -9,6 +9,15 @@ a {
   color: inherit;
   text-decoration: none;
 }
+form {
+  margin: 1em;
+}
+input {
+  margin: .5em;
+}
+.header {
+  display: inline-block;
+}
 .navLink {
   margin: 1em;
   color: inherit;
@@ -32,7 +41,7 @@ a {
 }
 .card {
   height: 90%;
-  background-color: rgba(250,250,250,.4);
+  background-color: rgba(250,250,250,.5);
   border: solid purple 1px;
   box-shadow: 3px 3px 10px 3px Purple;
   border-radius: .4em;
@@ -41,10 +50,27 @@ a {
   width: 7em;
 }
 .cardImg {
+  border-radius: 100px;
   margin: .4em;
   width: 5em;
   height: 5em;
+  border: solid purple 1px;
+  box-shadow: 3px 1px 20px 1px purple;
 }
 .imgShow {
-  width: 21em;
+  border-radius: 6px;
+  width: 25em;
+  border: solid purple 1px;
+  box-shadow: 3px 1px 20px 1px purple;
+}
+.showContainer {
+  display:flex;
+
+}
+.insideContainer {
+  display: flex;
+  flex-direction: column;
+}
+.showStat {
+  padding-left: 1.5em;
 }
