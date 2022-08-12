@@ -4,6 +4,7 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
+const Schema = require('./models/schema.js')
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
@@ -47,9 +48,38 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 // Routes
 //___________________
+
+
+//-----------------------------------------------
+//        SEED THE DATA
+//-----------------------------------------------
+
+// const Data = require('./models/seed.js')
+// Schema.create(Data, (err, data) => {
+//     console.log ('added provided data into collections')
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+  res.render('index.ejs');
 });
 
 //___________________

@@ -1,0 +1,9 @@
+body {
+  color: magenta;
+}
+a {
+  margin: 1em;
+}
+.secret{
+  /* display: none; */
+}
