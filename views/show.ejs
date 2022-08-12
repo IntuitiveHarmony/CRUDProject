@@ -7,18 +7,19 @@
   <header>
     <%-include('./partials/nav.ejs')%>
   </header>
-  <h1><%=item.name%></h1>
-  <div class ='showContainer'>
-  <div ='insideContainer'>
-    <img src="<%=item.img%>" alt="<%= item.name %>" class ='imgShow'>
-  </div>
-  <div class='insideContainer'>
-    <h3 class='showStat'>Style: <%=item.style%></h3>
-    <p class='showStat'>Size: <%=item.size%></p>
-    <h3 class='showStat'>Price: $<%=item.price%></h3>
-    <% for (let i=0; i < item.tags.length; i++ ) { %>
+  <div class='mainContainer'>
+    <h1><%=item.name%></h1>
+    <div class ='showContainer'>
+      <div ='insideContainer'>
+        <img src="<%=item.img%>" alt="<%= item.name %>" class ='imgShow'>
+      </div>
+    <div class='insideContainer'>
+      <h3 class='showStat'>Style: <%=item.style%></h3>
+      <p class='showStat'>Size: <%=item.size%></p>
+      <h3 class='showStat'>Price: $<%=item.price%></h3>
+        <% for (let i=0; i < item.tags.length; i++ ) { %>
       <p class='showStat'>Tags: <a href = '<%=[i]%>'><%=item.tags[i]%></a><p>
-      <%  } %>
+        <%  } %>
 
       <a href='/edit/<%=item._id%>' class='showStat'>edit this item</a>
 
@@ -26,6 +27,7 @@
       <input type='submit' value ='DELETE ITEM'>
       </form>
     </div>
+  
   </div>
 
 

@@ -7,9 +7,14 @@
   <header>
     <%-include('./partials/nav.ejs')%>
   </header>
+  <div class ='mainContainer'>
   <h2>Edit: <%= item.name %></h2>
-<img src="<%=item.img%>" alt="<%= item.name %>" class ='imgShow'><br>
-<form action="/edit/<%=item.id%>?_method=PUT" method="post">
+  <div class ='showContainer'>
+  <div ='insideContainer'>
+    <img src="<%=item.img%>" alt="<%= item.name %>" class ='imgShow'><br>
+  </div>
+    <div ='insideContainer'>
+    <form action="/edit/<%=item.id%>?_method=PUT" method="post">
   <input type="text" name="name" value="<%=item.name%>" placeholder ='Name:'><br>
   <input type="text" name="img" value="<%=item.img%>" placeholder ='Img url:'><br>
   <input type="text" name="size" value="<%=item.size%>" placeholder ='Size:'><br>
@@ -22,6 +27,8 @@
 <form action="/edit/<%=item.id%>?_method=DELETE" method="post">
   <input type='submit' value ='DELETE ITEM'>
 </form>
+</div>
+</div>
 
 
 
