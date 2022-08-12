@@ -2,7 +2,7 @@ const mongoose = require ('mongoose')
 
 const newSchema = new mongoose.Schema ({
     name: {type: String, require: true, unique: true},
-    img: {type: String},
+    img: {type: String, unique: true},
     size: {type: String},
     style: {type:String},
     price: {type: Number, require: true},

@@ -4,7 +4,14 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
-const Schema = require('./models/schema.js')
+//  Next Two Lines are for the favicon
+// const favicon = require('serve-favicon')
+// const path = require('path')
+//-----------------------------------------------
+// const Schema = require('./models/schema.js')
+// controller-----------------------------------------------
+const appController = require('./controllers/controller.js')
+//----------------------------------------------------------
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
@@ -36,6 +43,9 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 //use public folder for static assets
 app.use(express.static('public'));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use('/', appController)
+
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
 app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
@@ -58,21 +68,6 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Schema.create(Data, (err, data) => {
 //     console.log ('added provided data into collections')
 // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
