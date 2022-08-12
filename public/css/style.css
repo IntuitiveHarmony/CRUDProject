@@ -4,6 +4,8 @@ body {
 }
 a {
   margin: 1em;
+  color: inherit;
+  text-decoration: none;
 }
 .secret {
   /* display: none; */

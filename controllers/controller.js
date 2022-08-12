@@ -32,6 +32,21 @@ router.get('/collections', (req, res) => {
 })
 
 
+//-----------------------------------------------
+//        SHOW PAGE
+//-----------------------------------------------
+router.get('/show/:id', (req, res) => {
+    Schema.findById(req.params.id, (err, item) => {
+        res.render('show.ejs',
+        {
+          item: item
+        })
+    })
+
+})
+
+
+
 
 
 
