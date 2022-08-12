@@ -7,9 +7,8 @@
   <header>
     <%-include('./partials/nav.ejs')%>
   </header>
-  <h2><%= item.name %></h2>
   <h1><%=item.name%></h1>
-  <img src="<%=item.img%>" alt="">
+  <img src="<%=item.img%>" alt="<%= item.name %>" class ='imgShow'>
   <h3>Type: <%=item.style%></h3>
   <h3>Price: $<%=item.price%>.00</h3>
   <%# <a href="/menu/">Go Back to Menu</a> %>

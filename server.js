@@ -8,7 +8,7 @@ const mongoose = require ('mongoose');
 // const favicon = require('serve-favicon')
 // const path = require('path')
 //-----------------------------------------------
-// const Schema = require('./models/schema.js')
+
 // controller-----------------------------------------------
 const appController = require('./controllers/controller.js')
 //----------------------------------------------------------
@@ -63,7 +63,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //-----------------------------------------------
 //        SEED THE DATA
 //-----------------------------------------------
-
+// const Schema = require('./models/schema.js')
 // const Data = require('./models/seed.js')
 // Schema.create(Data, (err, data) => {
 //     console.log ('added provided data into collections')
