@@ -1,9 +1,10 @@
 body {
   padding: .5em;
-  color: magenta;
+  color: black;
 }
 
 a {
+  mrgin: 2em;
   indent: -10px;
   color: inherit;
   text-decoration: none;
@@ -22,6 +23,7 @@ a {
   background-size: 100%;
   background-repeat: no-repeat;
   display: flex;
+  flex-wrap: wrap;
   /* border: solid black 1px; */
   padding-left: 2em;
   padding-right: 2em;
@@ -44,27 +46,5 @@ a {
   height: 5em;
 }
 .imgShow {
-  max-width: 17em;
+  width: 21em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//

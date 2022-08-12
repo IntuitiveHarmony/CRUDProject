@@ -37,7 +37,7 @@ router.get('/edit/:id', (req, res) => {
 router.put('/edit/:id', (req,res) => {
     Schema.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,update) => {
       console.log(update)
-  
+
         res.redirect('/collections')
     })
 })
@@ -78,12 +78,9 @@ router.get('/show/:id', (req, res) => {
 //-----------------------------------------------
 router.delete('/show/:id', (req, res) => {
     Schema.findByIdAndRemove(req.params.id, (err, deleted) =>{
-        res.redirect('/')
+        res.redirect('/collections')
     })
 })
-
-
-
 
 
 //-----------------------------------------------

@@ -1,7 +1,7 @@
 module.exports = [
   {
     name: 'Rainbow Spiral',
-    img: '/images/photos/IMG_2744 Medium',
+    img: '/images/photos/IMG_2744 Medium.jpeg',
     size: 'Large',
     style: 'T-Shirt',
     price: 20,
