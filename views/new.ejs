@@ -7,7 +7,15 @@
   <header>
     <%-include('./partials/nav.ejs')%>
   </header>
-
+  <h1>Add New Item</h1>
+    <form action='/new/' method='POST'>
+      <input type="text" name="name" placeholder='name'/><br/>
+      <input type="text" name="img" placeholder='img url'/><br/>
+      <input type="text" name="size" placeholder='size'/><br/>
+      <input type="text" name="price" placeholder='price'/><br/>
+      <input type="array" name="tags" placeholder='tag, tag, tag'/><br/>
+      <input type='submit' value='Add Item To Collection'>
+    </form>
 
 
 

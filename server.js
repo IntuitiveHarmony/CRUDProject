@@ -44,7 +44,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 //use public folder for static assets
 app.use(express.static('public'));
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
-app.use('/', appController)
+
 
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
@@ -58,7 +58,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 // Routes
 //___________________
-
+app.use('/', appController)
 
 //-----------------------------------------------
 //        SEED THE DATA
