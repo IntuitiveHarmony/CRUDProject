@@ -2,7 +2,6 @@ body {
   padding: .5em;
   color: black;
 }
-
 a {
   mrgin: 2em;
   indent: -10px;
@@ -102,7 +101,6 @@ span.header {
 }
 .showContainer {
   display:flex;
-
 }
 .insideContainer {
   display: flex;
@@ -114,15 +112,7 @@ span.header {
 .hidden {
   display: none;
 }
-/* #top {
-  display: none;
-}
-#bottom {
-  display: none;
-}
-#misc {
-  display: none;
-} */
+
 
 
 

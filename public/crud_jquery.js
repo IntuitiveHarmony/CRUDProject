@@ -1,3 +1,6 @@
+//-----------------------------------------------
+//        DISPLAY AND HIDE COLLECTIONS FUNCTIONS
+//-----------------------------------------------
 const showTop = () => {
   $(`.misc`).addClass(`hidden`)
   $(`.bottom`).addClass(`hidden`)
@@ -15,26 +18,26 @@ const showMisc = () => {
 }
 
 
-
-
-
-
-
-
 $(() => {
-
+  //-----------------------------------------------
+  //        DISPLAY AND HIDE COLLECTIONS BUTTONS
+  //-----------------------------------------------
   $(`.topBtn`).on(`click`, showTop)
   $(`.bottomBtn`).on(`click`, showBottom)
   $(`.miscBtn`).on(`click`, showMisc)
 
+
+  //-----------------------------------------------
+  //        HOVER OVER BUTTONS/LINKS
+  //-----------------------------------------------
   $(`.navLink`).hover(function() {
     $(this).addClass(`focus`)
       }, function() {
         $(this).removeClass(`focus`).removeAttr(`id`, `current`)
     })
-    $(`.collectionLink`).hover(function() {
-      $(this).addClass(`focus`)
-        }, function() {
-          $(this).removeClass(`focus`).removeAttr(`id`, `current`)
-      })
+  $(`.collectionLink`).hover(function() {
+    $(this).addClass(`focus`)
+      }, function() {
+        $(this).removeClass(`focus`).removeAttr(`id`, `current`)
+    })
 })

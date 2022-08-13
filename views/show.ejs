@@ -16,7 +16,15 @@
     <div class='insideContainer'>
       <h3 class='showStat'>Style: <%=item.style%></h3>
       <p class='showStat'>Size: <%=item.size%></p>
-      <h3 class='showStat'>Price: $<%=item.price%></h3>
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <!-- CHECK IF ARCHIVED FOR PRICE DISPLAY   -->
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <% if (item.archive === false) { %>
+        <h3 class='showStat'>Price: $<%=item.price%></h3>
+      <%  } else { %>
+        <h3 class='showStat'>This particular item has already been sold.  Please inquire if you would like us to make something similar!</h3>
+         <% } %>
+
         <% for (let i=0; i < item.tags.length; i++ ) { %>
       <p class='showStat'>Tags: <a href = '<%=[i]%>'><%=item.tags[i]%></a><p>
         <%  } %>
@@ -27,7 +35,7 @@
       <input type='submit' value ='DELETE ITEM'>
       </form>
     </div>
-  
+
   </div>
 
 

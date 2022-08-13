@@ -62,6 +62,16 @@ router.get('/collections', (req, res) => {
 
 
 //-----------------------------------------------
+//        ARCHIVES ROUTE
+//-----------------------------------------------
+router.get('/archives', (req, res) => {
+    Schema.find({archive: true}, (err, item) => {
+        res.render('collections.ejs', {item: item})
+    })
+})
+
+
+//-----------------------------------------------
 //        SHOW ROUTE
 //-----------------------------------------------
 router.get('/show/:id', (req, res) => {
