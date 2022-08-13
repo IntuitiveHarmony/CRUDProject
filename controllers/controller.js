@@ -42,7 +42,7 @@ router.put('/edit/:id', (req,res) => {
 
 
 //-----------------------------------------------
-//        MAIN ROUTE
+//        INDEX ROUTE
 //-----------------------------------------------
 router.get('/', (req, res) => {
     Schema.find({}, (err, item) => {
