@@ -15,18 +15,37 @@
   </div>
     <div ='insideContainer'>
     <form action="/edit/<%=item.id%>?_method=PUT" method="post">
-  <input type="text" name="name" value="<%=item.name%>" placeholder ='Name:'><br>
-  <input type="text" name="img" value="<%=item.img%>" placeholder ='Img url:'><br>
-  <input type="text" name="size" value="<%=item.size%>" placeholder ='Size:'><br>
-  <input type="text" name="style" value="<%=item.style%>" placeholder ='Style:'><br>
-  <input type="text" name="price" value="<%=item.price%>" placeholder ='Price: (number only)'><br>
-  <input type='array' name='tags' value='<%=item.tags%>' placeholder ='Tag, Tag, Tag'><br>
-  <input type="boolean" name="archive" value="<%=item.archive%>"><br>
-  <input type="submit" value="Submit Changes" >
-</form>
-<form action="/edit/<%=item.id%>?_method=DELETE" method="post">
-  <input type='submit' value ='DELETE ITEM'>
-</form>
+      <input type="text" name="name" value="<%=item.name%>" placeholder ='Name:'><br>
+      <input type="text" name="img" value="<%=item.img%>" placeholder ='Img url:'><br>
+      <input type="text" name="size" value="<%=item.size%>" placeholder ='Size:'><br>
+      <input type="text" name="style" value="<%=item.style%>" placeholder ='Style:'><br>
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <!-- DROP DOWN MENU WITH VALUE POPULATED   -->
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <select type="text" name="catagory" value="<%=item.catagory%>"><br>
+        <%  let sTop = ''
+            let sBottom = ''
+            let sMisc = ''
+          if (item.catagory === 'top') {
+              sTop = 'selected'
+            } else if (item.catagory === 'bottom') {
+              sBottom = 'selected'
+            } else if (item.catagory === 'misc') {
+              sMisc = 'selected'
+            } %>
+        <option value="top" <%= sTop %> >Top</option>
+        <option value="bottom" <%= sBottom %>>Bottom</option>
+        <option value="misc" <%= sMisc %>>Misc</option>
+      </select><br>
+      <input type="text" name="price" value="<%=item.price%>" placeholder ='Price: (number only)'><br>
+      <input type='array' name='tags' value='<%=item.tags%>' placeholder ='Tag, Tag, Tag'><br>
+      <input type="boolean" name="archive" value="<%=item.archive%>"><br>
+      <input type="submit" value="Submit Changes" >
+    </form>
+
+  <form action="/edit/<%=item.id%>?_method=DELETE" method="post">
+    <input type='submit' value ='DELETE ITEM'>
+  </form>
 </div>
 </div>
 

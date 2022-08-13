@@ -60,17 +60,6 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 app.use('/', appController)
 
-//-----------------------------------------------
-//        SEED THE DATA
-//-----------------------------------------------
-// const Schema = require('./models/schema.js')
-// const Data = require('./models/seed.js')
-// Schema.create(Data, (err, data) => {
-//     console.log ('added provided data into collections')
-// })
-
-
-
 
 //localhost:3000
 app.get('/' , (req, res) => {

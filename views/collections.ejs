@@ -7,20 +7,16 @@
   <header>
     <%-include('./partials/nav.ejs')%>
   </header>
-
-  <%# <div class = 'collectionContainer'>
-    <div class ='CollectionBox'>
-      <a href =''>Spirals</a>
-      <a href =''>Mandalas</a>
-      <a href =''>Geodes</a>
-      <a href =''>Folds</a>
-    </div>
-  </div> %>
+  <nav class ='.collectionNav'>
+    <ul class='collectionLink topBtn'>Tops</ul>
+    <ul class='collectionLink bottomBtn'>Bottoms</ul>
+    <ul class='collectionLink miscBtn'>Misc</ul>
+  </nav>
 
     <div class ='cardContainer'>
       <%for (let i = 0; i < item.length; i++){%>
         <a href ='/show/<%= item[i]._id %>'>
-          <div class ='card'>
+          <div class ='card <%= item[i].catagory %> hidden'>
           <h3><%= item[i].name %></h3>
           <img src='<%= item[i].img %>' class = 'cardImg'>
           </div>

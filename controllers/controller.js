@@ -36,8 +36,6 @@ router.get('/edit/:id', (req, res) => {
 
 router.put('/edit/:id', (req,res) => {
     Schema.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,update) => {
-      console.log(update)
-
         res.redirect('/collections')
     })
 })
@@ -57,7 +55,7 @@ router.get('/', (req, res) => {
 //        COLLECTIONS ROUTE
 //-----------------------------------------------
 router.get('/collections', (req, res) => {
-    Schema.find({}, (err, item) => {
+    Schema.find({archive: false}, (err, item) => {
         res.render('collections.ejs', {item: item})
     })
 })
@@ -90,7 +88,19 @@ router.get('/contact', (req, res) => {
     res.render('contact.ejs')
 })
 
-
+//-----------------------------------------------
+//        SEED THE DATA
+//-----------------------------------------------
+// const Data = require('./models/seed.js')
+// Schema.create(Data, (err, data) => {
+//     console.log ('added provided data into collections')
+// })
+//-----------------------------------------------
+//        UPDATE ARCHIVE INFO
+//-----------------------------------------------
+// Schema.updateMany({}, {archive: false}, {new:true}, (err,update) => {
+//   console.log('Updated archive info to all false')
+// })
 
 
 

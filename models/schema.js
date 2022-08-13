@@ -5,9 +5,10 @@ const newSchema = new mongoose.Schema ({
     img: {type: String, unique: true},
     size: {type: String},
     style: {type:String},
+    catagory: {type: String},
     price: {type: Number, require: true},
     tags: [String],
-    archive: {type: Boolean},
+    archive: {type: Boolean, default: false},
 })
 
 const Schema = mongoose.model('items', newSchema)
