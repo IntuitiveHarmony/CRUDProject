@@ -62,14 +62,23 @@ router.get('/collections', (req, res) => {
 
 
 //-----------------------------------------------
-//        ARCHIVES ROUTE
+//        ARCHIVES/UNARCHIVE ROUTES
 //-----------------------------------------------
 router.get('/archives', (req, res) => {
     Schema.find({archive: true}, (err, item) => {
         res.render('collections.ejs', {item: item})
     })
 })
-
+router.get('/archives/:id', (req, res) => {
+    Schema.findByIdAndUpdate(req.params.id, {archive: true}, {new: true}, (err, item ) =>{
+      res.redirect('/archives')
+    })
+})
+router.get('/unarchive/:id', (req, res) => {
+    Schema.findByIdAndUpdate(req.params.id, {archive: false}, {new: true}, (err, item ) =>{
+      res.redirect('/collections')
+    })
+})
 
 //-----------------------------------------------
 //        SHOW ROUTE

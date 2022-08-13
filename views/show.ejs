@@ -19,21 +19,46 @@
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
       <!-- CHECK IF ARCHIVED FOR PRICE DISPLAY   -->
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-      <% if (item.archive === false) { %>
-        <h3 class='showStat'>Price: $<%=item.price%></h3>
-      <%  } else { %>
-        <h3 class='showStat'>This particular item has already been sold.  Please inquire if you would like us to make something similar!</h3>
-         <% } %>
-
-        <% for (let i=0; i < item.tags.length; i++ ) { %>
+    <% if (item.archive === false) { %>
+      <h3 class='showStat'>Price: $<%=item.price%></h3>
+    <%  } else { %>
+      <h3 class='showStat'>This particular item has already been sold.  Please inquire if you would like us to make something similar!</h3>
+    <% } %>
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <!-- LOOPING OVER TAG ARRAY TO MAKE LINKS  -->
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <% for (let i=0; i < item.tags.length; i++ ) { %>
       <p class='showStat'>Tags: <a href = '<%=[i]%>'><%=item.tags[i]%></a><p>
-        <%  } %>
+    <%  } %>
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!-- EDIT BUTTON                           -->
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <form action="/edit/<%=item._id%>" class='showStat'>
+          <input type='submit' value ='EDIT ITEM'>
+        </form>
 
-      <a href='/edit/<%=item._id%>' class='showStat'>edit this item</a>
 
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <!-- ARCHIVE BUTTON                         -->
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+      <% if (item.archive === false) { %>
+        <form action="/archives/<%=item._id%>" class='showStat'>
+          <input type='submit' value ='ARCHIVE ITEM'>
+        </form>
+      <%  } else { %>
+        <form action="/unarchive/<%=item._id%>" class='showStat'>
+          <input type='submit' value ='UNARCHIVE ITEM'>
+        </form>
+      <% } %>
+
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <!-- DELETE BUTTON                         -->
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
       <form action="<%=item.id%>?_method=DELETE" method="post" class='showStat'>
-      <input type='submit' value ='DELETE ITEM'>
+        <input type='submit' value ='DELETE ITEM'>
       </form>
+
     </div>
 
   </div>
