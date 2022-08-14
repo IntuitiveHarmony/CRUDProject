@@ -17,8 +17,24 @@ input {
 select {
   margin: .5em;
 }
+.headerContainer {
+  display: flex;
+  justify-content: left;
+}
+.kingfisher {
+  width: 15em;
+}
+.birdbox {
+  margin-left: -.7em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
 .header {
   text-shadow: 2px 3px rgba(255, 0, 255), 4px 6px rgba(247, 255, 0), 6px 8px rgba(135, 0, 220);
+  margin-left: -.5em;
   font-size: 5em;
   color: rgba(0, 255, 255);
   font-family: 'Luckiest Guy';
@@ -27,6 +43,9 @@ select {
 }
 span.header {
   transform: scaleY(1.3);
+}
+.tagLine {
+  margin-top: -2.5em;
 }
 .navLink {
   padding: .2em;

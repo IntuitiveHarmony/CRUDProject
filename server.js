@@ -4,10 +4,7 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
-//  Next Two Lines are for the favicon
-// const favicon = require('serve-favicon')
-// const path = require('path')
-//-----------------------------------------------
+
 
 // controller-----------------------------------------------
 const appController = require('./controllers/controller.js')
@@ -26,6 +23,50 @@ const PORT = process.env.PORT || 3003;
 //___________________
 // How to connect to the database either via heroku or locally
 const MONGODB_URI = process.env.MONGODB_URI;
+
+
+
+
+
+
+//---trying uploading 1=------------------------------------
+// const multer = require('multer');
+// const upload = multer({dest: 'public/images/phots/'});
+//
+// app.use(express.json());
+// // app.use(express.urlencoded({extended: true}));
+// app.use(morgan('dev'));
+//-----------------------------------------
+
+// trial 2
+const multer = require('multer');
+const upload = multer({dest: 'public/images/phots2/'});
+// const imageUpload = multer({
+//       storage: imageStorage,
+//       limits: {
+//         fileSize: 1000000 // 1000000 Bytes = 1 MB
+//       },
+//       fileFilter(req, file, cb) {
+//         if (!file.originalname.match(/\.(png|jpg)$/)) {
+//            // upload only png and jpg format
+//            return cb(new Error('Please upload a Image'))
+//          }
+//        cb(undefined, true)
+//     }
+// })
+// const imageStorage = multer.diskStorage({
+//     // Destination to store image
+//     destination: '/uploads/photos',
+//       filename: (req, file, cb) => {
+//           cb(null, file.fieldname + '_' + Date.now()
+//              + path.extname(file.originalname))
+//             // file.fieldname is name of the field (image)
+//             // path.extname get the uploaded file extension
+//     }
+// });
+
+
+
 
 // Connect to Mongo &
 // Fix Depreciation Warnings from Mongoose
