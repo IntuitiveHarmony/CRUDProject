@@ -1,9 +1,24 @@
 body {
-  background-image: url('/images/inkBackgroundink2.png');
+  padding: .5em;
+}
+/*-----------------------------------------------
+        MAKE THE BACKGROUND OPAQUE ONLY  https://css-tricks.com/snippets/css/transparent-background-images/
+-----------------------------------------------*/
+body::after {
+  content: "";
+  background: url('/images/inkBackgroundink2.png');
   background-size: 120% auto;
   background-repeat: no-repeat;
-  padding: .5em;
-  /* background-color: grey; */
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+a {
+  text-decoration: none;
 }
 form {
   margin: 1em;
@@ -23,14 +38,11 @@ select {
 }
 .birdbox {
   margin-left: -.7em;
-  /* text-align: center; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .header {
-
-  /* text-shadow: 2px 3px rgba(255, 0, 255), 4px 6px rgba(247, 255, 0), 6px 8px rgba(135, 0, 220); */
   margin-top: 1em;
   margin-left: -1em;
   font-size: 3.2em;
@@ -38,7 +50,6 @@ select {
   color: rgba(180, 0, 255);
   text-shadow: 3px 4px rgba(0, 255, 255);
   font-family: 'Rock Salt';
-  /* font-family: fantasy; */
   letter-spacing: .06em;
   display: inline-block;
 }
@@ -87,7 +98,6 @@ select {
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
-  /* border: solid black 1px; */
   padding-left: 2em;
   padding-right: 2em;
   padding-top: 1em;
@@ -95,6 +105,7 @@ select {
 
 }
 .card {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -137,19 +148,23 @@ select {
 .hidden {
   display: none;
 }
+.selected {
+  background-color: green;
+}
+
+/*-----------------------------------------------
+      MEDIA QUERIES
+-----------------------------------------------*/
 @media only screen and (max-width: 600px) {
   body {
     background-size: contain;
   }
   .header {
     text-shadow: 1px 2px rgba(0, 255, 255);
-    /* text-shadow: 2px 3px rgba(255, 0, 255), 4px 6px rgba(247, 255, 0), 6px 8px rgba(135, 0, 220); */
-    /* margin-top: -.5em; */
     margin-left: -1em;
     font-size: 1.6em;
     color: rgba(180, 0, 255);
     font-family: 'Rock Salt';
-    /* font-family: fantasy; */
     letter-spacing: .06em;
     display: inline-block;
   }

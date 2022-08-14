@@ -41,3 +41,11 @@ $(() => {
         $(this).removeClass(`focus`).removeAttr(`id`, `current`)
     })
 })
+
+
+
+
+
+
+
+//
