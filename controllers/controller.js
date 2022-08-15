@@ -58,7 +58,7 @@ app.use(methodOverride('_method'))
 //-----------------------------------------------
 router.post('/new', (req, res) => {
   Schema.create(req.body, (error, newItem) => {
-    res.redirect('/collections', {test:''})
+    res.redirect('/collections')
   })
 })
 
@@ -67,7 +67,7 @@ router.post('/new', (req, res) => {
 //        NEW ROUTE
 //-----------------------------------------------
 router.get('/new', (req, res) => {
-    res.render('new.ejs', {test:''})
+    res.render('new.ejs', {test:'add'})
 })
 
 
@@ -82,7 +82,7 @@ router.get('/edit/:id', (req, res) => {
 
 router.put('/edit/:id', (req,res) => {
     Schema.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,update) => {
-        res.redirect('/collections', {test:''})
+        res.redirect('/collections')
     })
 })
 
@@ -118,12 +118,12 @@ router.get('/archives', (req, res) => {
 })
 router.get('/archives/:id', (req, res) => {
     Schema.findByIdAndUpdate(req.params.id, {archive: true}, {new: true}, (err, item ) =>{
-      res.redirect('/archives', {test:''})
+      res.redirect('/archives')
     })
 })
 router.get('/unarchive/:id', (req, res) => {
     Schema.findByIdAndUpdate(req.params.id, {archive: false}, {new: true}, (err, item ) =>{
-      res.redirect('/collections', {test:''})
+      res.redirect('/collections')
     })
 })
 
@@ -142,7 +142,7 @@ router.get('/show/:id', (req, res) => {
 //-----------------------------------------------
 router.delete('/show/:id', (req, res) => {
     Schema.findByIdAndRemove(req.params.id, (err, deleted) =>{
-        res.redirect('/collections', {test:''})
+        res.redirect('/collections')
     })
 })
 
@@ -151,7 +151,7 @@ router.delete('/show/:id', (req, res) => {
 //        CONTACT ROUTE
 //-----------------------------------------------
 router.get('/contact', (req, res) => {
-    res.render('contact.ejs', {test:''})
+    res.render('contact.ejs', {test:'cont'})
 })
 
 //-----------------------------------------------

@@ -7,10 +7,11 @@
   <header>
     <%-include('./partials/nav.ejs')%>
   </header>
+  <div class='mainContainer'>
   <h1>Add New Item</h1>
-  <form action='/upload' enctype="multipart/form-data" method='POST'>
+  <form action='/upload' class='formBtn' enctype="multipart/form-data" method='POST'>
     <input type='file' name ='picFile' >
-    <input type='submit' value ='UPLOAD'>
+    <input type='submit'  value ='UPLOAD'>
   </form>
     <form action='/new/' method='POST'>
       <input type="text" name="name" placeholder='name'/><br/>
@@ -25,15 +26,12 @@
       </select><br>
       <input type="text" name="price" placeholder='price'/><br/>
       <input type="array" name="tags" placeholder='tag, tag, tag'/><br/>
-      <input type='submit' value='Add Item To Collection'>
-    </form>
-    <form action='/upload' enctype="multipart/form-data" method='POST'>
-      <input type='file' name ='picFile' >
+      <input type='submit' class ='navLink' value='Add Item To Collection'>
     </form>
     <form action="/" method="">
-      <input type='submit' value ='CANCEL'>
+      <input type='submit' class ='navLink' value ='CANCEL'>
     </form>
-
+</div>
 
 
 </body>

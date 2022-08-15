@@ -19,7 +19,7 @@
     <div class ='cardContainer'>
       <%for (let i = 0; i < item.length; i++){%>
         <a href ='/show/<%= item[i]._id %>'>
-          <div class ='card <%= item[i].catagory %> hidden'>
+          <div class ='card <%= item[i].catagory %> '>
           <h3><%= item[i].name %></h3>
           <img src='<%= item[i].img %>' class = 'cardImg' alt ='<%= item[i].name %>' >
           </div>

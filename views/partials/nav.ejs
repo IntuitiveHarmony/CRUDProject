@@ -5,21 +5,28 @@
   </div>
   <div class ='birdbox'>
     <a href ='/'><h1 class ='header'>Kingfisher<br>Tye Dye</h1></a>
-    <h3 class='tagLine'>Wear with Joy and Be Kind!</h3>
+    <h3 class='tagLine'>Wear Joyfully, Be Kind!</h3>
   </div>
 </div>
 <nav class='navContainer'>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- THIS IS TO HIGHLIGHT CURRENT TAB IN THE NAV  -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <%
 let collection = ''
-let archive =''
+let archive = ''
+let contact = ''
+let add = ''
 if (test === 'coll') {
   collection = 'selected'
 } else if (test === 'arch') {
   archive = 'selected'
-} else {
-  
-  }%>
+} else if (test === 'cont') {
+  contact = 'selected'
+} else if (test === 'add') {
+  add = 'selected'
+} else {}
+%>
 
 <div>
   <a href ='/collections' class='navLink <%= collection %> ' >Collections</a>
@@ -29,10 +36,10 @@ if (test === 'coll') {
 
   </div>
   <div>
-  <a href ='/contact' class='navLink'>Contact</a>
+  <a href ='/contact' class='navLink <%= contact %>'>Contact</a>
   </div>
   <div>
-  <a href ='/new' class ='navLink secret'>Add New Item</a>
+  <a href ='/new' class ='navLink secret <%= add %>'>Add New Item</a>
   </div>
 </nav>
 <%# <nav class ='collectionNav'>

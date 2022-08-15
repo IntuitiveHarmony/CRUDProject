@@ -10,12 +10,12 @@
 
 
   <div class='mainContainer'>
-    <h1><%=item.name%></h1>
+    <h1 class='showHeader'><%=item.name%></h1>
     <div class='crudContainer'>
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
   <!-- DELETE BUTTON                         -->
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-      <form action="<%=item.id%>?_method=DELETE" method="post" class='showStat'>
+      <form action="<%=item.id%>?_method=DELETE" method="post" class='secret'>
         <input type='submit' value ='DELETE ITEM'>
       </form>
 
@@ -24,11 +24,11 @@
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
       <% if (item.archive === false) { %>
-      <form action="/archives/<%=item._id%>" class='showStat'>
+      <form action="/archives/<%=item._id%>" class='secret'>
         <input type='submit' value ='ARCHIVE ITEM'>
       </form>
       <%  } else { %>
-      <form action="/unarchive/<%=item._id%>" class='showStat'>
+      <form action="/unarchive/<%=item._id%>" class='secret'>
         <input type='submit' value ='UNARCHIVE ITEM'>
       </form>
       <% } %>
@@ -36,7 +36,7 @@
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
   <!-- EDIT BUTTON                           -->
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-      <form action="/edit/<%=item._id%>" class='showStat'>
+      <form action="/edit/<%=item._id%>" class='secret'>
         <input type='submit' value ='EDIT ITEM'>
       </form>
   </div>
