@@ -47,18 +47,29 @@
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
       <select type="text" name="catagory" value="<%=item.catagory%>"><br>
         <option value="" disabled selected>Catagory:</option>
-        <%  let sTop = ''
-            let sBottom = ''
+        <%  let sShirts = ''
+            let sPants = ''
+            let sSkirts = ''
+            let sKids = ''
             let sMisc = ''
-          if (item.catagory === 'top') {
-              sTop = 'selected'
-            } else if (item.catagory === 'bottom') {
-              sBottom = 'selected'
+          if (item.catagory === 'shirts') {
+              sShirts = 'selected'
+            } else if (item.catagory === 'pants') {
+              sPants = 'selected'
+            } else if (item.catagory === 'skirts') {
+              sSkirts = 'selected'
+            } else if (item.catagory === 'kids') {
+              sKids = 'selected'
             } else if (item.catagory === 'misc') {
               sMisc = 'selected'
-            } %>
-        <option value="top" <%= sTop %> >Top</option>
-        <option value="bottom" <%= sBottom %>>Bottom</option>
+            } else {}%>
+
+
+
+        <option value="shirts" <%= sShirts %>>Shirts</option>
+        <option value="pants" <%= sPants %>>Pants</option>
+        <option value="skirts" <%= sSkirts %> >Skirts</option>
+        <option value="kids" <%= sKids %>>Kids</option>
         <option value="misc" <%= sMisc %>>Misc</option>
       </select><br>
       <input type="text" name="price" value="<%=item.price%>" placeholder ='Price: (number only)'><br>

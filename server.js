@@ -39,8 +39,8 @@ const MONGODB_URI = process.env.MONGODB_URI;
 //-----------------------------------------
 
 // trial 2
-const multer = require('multer');
-const upload = multer({dest: 'public/images/phots2/'});
+// const multer = require('multer');
+// const upload = multer({dest: 'public/images/phots2/'});
 // const imageUpload = multer({
 //       storage: imageStorage,
 //       limits: {
@@ -73,6 +73,7 @@ const upload = multer({dest: 'public/images/phots2/'});
 // May or may not need these depending on your Mongoose version
 mongoose.connect(MONGODB_URI);
 
+
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
@@ -84,8 +85,6 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 //use public folder for static assets
 app.use(express.static('public'));
-// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
-
 
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}

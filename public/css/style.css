@@ -99,10 +99,16 @@ select {
   background-color: rgba(226, 89, 255, 1);
   text-decoration: none;
 }
-.topBtn {
+.shirtsBtn {
   background-color: rgba(226, 89, 255, .4);
 }
-.bottomBtn {
+.pantsBtn {
+background-color: rgba(226, 89, 255, .4);
+}
+.skirtsBtn {
+background-color: rgba(226, 89, 255, .4);
+}
+.kidsBtn {
 background-color: rgba(226, 89, 255, .4);
 }
 .miscBtn {
