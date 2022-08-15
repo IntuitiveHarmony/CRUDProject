@@ -4,6 +4,7 @@ const methodOverride  = require('method-override');
 const Schema = require('../models/schema.js')
 const app = express ();
 
+
 //--------------------- upload trial 1--------------------
 // const morgan = require('morgan')
 // const multer = require('multer');
@@ -101,8 +102,9 @@ router.get('/', (req, res) => {
 //        COLLECTIONS ROUTE
 //-----------------------------------------------
 router.get('/collections', (req, res) => {
+
     Schema.find({archive: false}, (err, item) => {
-        res.render('collections.ejs', {item: item})
+        res.render('collections.ejs',{item: item})
     })
 })
 

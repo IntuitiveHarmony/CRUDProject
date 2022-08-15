@@ -6,13 +6,16 @@
 <body>
   <header>
     <%-include('./partials/nav.ejs')%>
+
   </header>
+
+
+
   <nav class ='collectionNav'>
     <ul class='collectionLink topBtn'>Tops</ul>
     <ul class='collectionLink bottomBtn'>Bottoms</ul>
     <ul class='collectionLink miscBtn'>Misc</ul>
   </nav>
-
     <div class ='cardContainer'>
       <%for (let i = 0; i < item.length; i++){%>
         <a href ='/show/<%= item[i]._id %>'>
