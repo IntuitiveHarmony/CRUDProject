@@ -210,6 +210,9 @@ select {
     background-color: rgba(0, 180, 255);
     text-decoration: none;
   }
+  .selected {
+    background-color: rgba(226, 89, 255, 1);
+  }
 
 
 
