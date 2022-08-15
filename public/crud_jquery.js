@@ -5,16 +5,25 @@ const showTop = () => {
   $(`.misc`).addClass(`hidden`)
   $(`.bottom`).addClass(`hidden`)
   $(`.top`).removeClass(`hidden`)
+  $(`.topBtn`).addClass(`selected`)
+  $(`.bottomBtn`).removeClass(`selected`)
+  $(`.miscBtn`).removeClass(`selected`)
 }
 const showBottom = () => {
   $(`.misc`).addClass(`hidden`)
   $(`.top`).addClass(`hidden`)
   $(`.bottom`).removeClass(`hidden`)
+  $(`.topBtn`).removeClass(`selected`)
+  $(`.bottomBtn`).addClass(`selected`)
+  $(`.miscBtn`).removeClass(`selected`)
 }
 const showMisc = () => {
   $(`.top`).addClass(`hidden`)
   $(`.bottom`).addClass(`hidden`)
   $(`.misc`).removeClass(`hidden`)
+  $(`.topBtn`).removeClass(`selected`)
+  $(`.bottomBtn`).removeClass(`selected`)
+  $(`.miscBtn`).addClass(`selected`)
 }
 
 
