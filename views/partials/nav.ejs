@@ -9,11 +9,24 @@
   </div>
 </div>
 <nav class='navContainer'>
+
+<%
+let collection = ''
+let archive =''
+if (test === 'coll') {
+  collection = 'selected'
+} else if (test === 'arch') {
+  archive = 'selected'
+} else {
+  
+  }%>
+
 <div>
-  <a href ='/collections' class='navLink collection' >Collections</a>
+  <a href ='/collections' class='navLink <%= collection %> ' >Collections</a>
 </div>
 <div>
-  <a href ='/archives' class='navLink archives'>Archives</a>
+  <a href ='/archives' class='navLink <%= archive %> '>Archives</a>
+
   </div>
   <div>
   <a href ='/contact' class='navLink'>Contact</a>

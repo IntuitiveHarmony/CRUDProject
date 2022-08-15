@@ -9,6 +9,29 @@
   </header>
   <div class ='mainContainer'>
   <h2>Edit: <%= item.name %></h2>
+  <div class='crudContainer'>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- DELETE BUTTON                         -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <form action="<%=item.id%>?_method=DELETE" method="post" class='showStat'>
+      <input type='submit' value ='DELETE ITEM'>
+    </form>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- ARCHIVE/UNARCHIVE BUTTON              -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <% if (item.archive === false) { %>
+    <form action="/archives/<%=item._id%>" class='showStat'>
+      <input type='submit' value ='ARCHIVE ITEM'>
+    </form>
+    <%  } else { %>
+    <form action="/unarchive/<%=item._id%>" class='showStat'>
+      <input type='submit' value ='UNARCHIVE ITEM'>
+    </form>
+    <% } %>
+
+</div>
   <div class ='showContainer'>
   <div ='insideContainer'>
     <img src="<%=item.img%>" alt="<%= item.name %>" class ='imgShow'><br>
@@ -47,9 +70,6 @@
       <input type='submit' value ='CANCEL'>
     </form>
 
-  <form action="/edit/<%=item.id%>?_method=DELETE" method="post">
-    <input type='submit' value ='DELETE ITEM'>
-  </form>
 </div>
 </div>
 

@@ -16,10 +16,7 @@ const showMisc = () => {
   $(`.bottom`).addClass(`hidden`)
   $(`.misc`).removeClass(`hidden`)
 }
-// const sCollection = () => {
-//   $(`.collection`).addClass(`selected`)
-//   $(`.collectionLink`).removeClass(`hidden`)
-// }
+
 
 $(() => {
   //-----------------------------------------------
@@ -29,7 +26,6 @@ $(() => {
   $(`.bottomBtn`).on(`click`, showBottom)
   $(`.miscBtn`).on(`click`, showMisc)
 
-  // $(`.collection`).on(`click`, sCollection)
 
   //-----------------------------------------------
   //        HOVER OVER BUTTONS/LINKS

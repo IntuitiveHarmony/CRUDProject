@@ -34,7 +34,7 @@ select {
   justify-content: left;
 }
 .kingfisher {
-  width: 15em;
+  width: 12em;
 }
 .birdbox {
   margin-left: -.7em;
@@ -43,9 +43,9 @@ select {
   justify-content: space-between;
 }
 .header {
-  margin-top: 1em;
-  margin-left: -1em;
-  font-size: 3.2em;
+  margin-top: .1em;
+  margin-left: ;
+  font-size: 2.8em;
   line-height: 1.6em;
 
   /* color:rgba(0, 200, 255) ;
@@ -103,6 +103,10 @@ select {
   border-radius: 6px;
   border: solid black 1px;
   color: purple;
+}
+.crudContainer {
+  display: flex;
+  margin-top: -2em;
 }
 .secret {
   /* display: none; */

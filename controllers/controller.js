@@ -4,7 +4,6 @@ const methodOverride  = require('method-override');
 const Schema = require('../models/schema.js')
 const app = express ();
 
-
 //--------------------- upload trial 1--------------------
 // const morgan = require('morgan')
 // const multer = require('multer');
@@ -59,7 +58,7 @@ app.use(methodOverride('_method'))
 //-----------------------------------------------
 router.post('/new', (req, res) => {
   Schema.create(req.body, (error, newItem) => {
-    res.redirect('/collections')
+    res.redirect('/collections', {test:''})
   })
 })
 
@@ -68,7 +67,7 @@ router.post('/new', (req, res) => {
 //        NEW ROUTE
 //-----------------------------------------------
 router.get('/new', (req, res) => {
-    res.render('new.ejs')
+    res.render('new.ejs', {test:''})
 })
 
 
@@ -77,13 +76,13 @@ router.get('/new', (req, res) => {
 //-----------------------------------------------
 router.get('/edit/:id', (req, res) => {
     Schema.findById(req.params.id, (err, item ) =>{
-        res.render('edit.ejs', {item: item})
+        res.render('edit.ejs', {item: item, test:''})
     })
 })
 
 router.put('/edit/:id', (req,res) => {
     Schema.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,update) => {
-        res.redirect('/collections')
+        res.redirect('/collections', {test:''})
     })
 })
 
@@ -93,7 +92,7 @@ router.put('/edit/:id', (req,res) => {
 //-----------------------------------------------
 router.get('/', (req, res) => {
     Schema.find({}, (err, item) => {
-        res.render('index.ejs', {item: item})
+        res.render('index.ejs', {item: item, test:''})
     })
 })
 
@@ -104,7 +103,7 @@ router.get('/', (req, res) => {
 router.get('/collections', (req, res) => {
 
     Schema.find({archive: false}, (err, item) => {
-        res.render('collections.ejs',{item: item})
+        res.render('collections.ejs',{item: item, test:'coll'})
     })
 })
 
@@ -114,17 +113,17 @@ router.get('/collections', (req, res) => {
 //-----------------------------------------------
 router.get('/archives', (req, res) => {
     Schema.find({archive: true}, (err, item) => {
-        res.render('collections.ejs', {item: item})
+        res.render('collections.ejs', {item: item, test:'arch'})
     })
 })
 router.get('/archives/:id', (req, res) => {
     Schema.findByIdAndUpdate(req.params.id, {archive: true}, {new: true}, (err, item ) =>{
-      res.redirect('/archives')
+      res.redirect('/archives', {test:''})
     })
 })
 router.get('/unarchive/:id', (req, res) => {
     Schema.findByIdAndUpdate(req.params.id, {archive: false}, {new: true}, (err, item ) =>{
-      res.redirect('/collections')
+      res.redirect('/collections', {test:''})
     })
 })
 
@@ -133,7 +132,7 @@ router.get('/unarchive/:id', (req, res) => {
 //-----------------------------------------------
 router.get('/show/:id', (req, res) => {
     Schema.findById(req.params.id, (err, item) => {
-        res.render('show.ejs', {item: item})
+        res.render('show.ejs', {item: item, test:''})
     })
 })
 
@@ -143,7 +142,7 @@ router.get('/show/:id', (req, res) => {
 //-----------------------------------------------
 router.delete('/show/:id', (req, res) => {
     Schema.findByIdAndRemove(req.params.id, (err, deleted) =>{
-        res.redirect('/collections')
+        res.redirect('/collections', {test:''})
     })
 })
 
@@ -152,7 +151,7 @@ router.delete('/show/:id', (req, res) => {
 //        CONTACT ROUTE
 //-----------------------------------------------
 router.get('/contact', (req, res) => {
-    res.render('contact.ejs')
+    res.render('contact.ejs', {test:''})
 })
 
 //-----------------------------------------------
