@@ -9,12 +9,14 @@
   </header>
 
 
-  <%for (let i = 0; i < item.length; i++) { %>
+
     <div class = 'slideContainer'>
+    <%for (let i = 0; i < item.length; i++) { %>
       <img src ='<%= item[i].img %>' class ='slide' alt ='<%= item[i].name %>'>
+<% } %>
     </div>
 
-  <% } %>
+
   <h1> carousel with 5 random itms from collection</h1>
   <p>All of our items are hand made with care and pride in Colorado.  We use premium cotton fabrics and 100% organic dyes.  Not seeing what you're really after? Certian design or color palette perhaps?  We are happy to make custom orders, and love to hear your ideas!  Simply <a href ='/contact'>contact us</a></p>
 

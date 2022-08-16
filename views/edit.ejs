@@ -50,6 +50,7 @@
         <%  let sShirts = ''
             let sPants = ''
             let sSkirts = ''
+            let sHoodies = ''
             let sKids = ''
             let sMisc = ''
           if (item.catagory === 'shirts') {
@@ -58,6 +59,8 @@
               sPants = 'selected'
             } else if (item.catagory === 'skirts') {
               sSkirts = 'selected'
+            } else if (item.catagory === 'hoodies') {
+              sHoodies = 'selected'
             } else if (item.catagory === 'kids') {
               sKids = 'selected'
             } else if (item.catagory === 'misc') {
@@ -66,11 +69,12 @@
 
 
 
-        <option value="shirts" <%= sShirts %>>Shirts</option>
-        <option value="pants" <%= sPants %>>Pants</option>
-        <option value="skirts" <%= sSkirts %> >Skirts</option>
-        <option value="kids" <%= sKids %>>Kids</option>
-        <option value="misc" <%= sMisc %>>Misc</option>
+        <option value="shirts" <%= sShirts %> >Shirts</option>
+        <option value="pants" <%= sPants %> >Pants</option>
+        <option value="skirts" <%= sSkirts %> >Skirts/ Dresses</option>
+        <option value="skirts" <%= sHoodies %> >Hoodies</option>
+        <option value="kids" <%= sKids %> >Kids</option>
+        <option value="misc" <%= sMisc %> >Misc</option>
       </select><br>
       <input type="text" name="price" value="<%=item.price%>" placeholder ='Price: (number only)'><br>
       <input type='array' name='tags' value='<%=item.tags%>' placeholder ='Tag, Tag, Tag'><br>
