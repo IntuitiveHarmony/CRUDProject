@@ -1,5 +1,5 @@
 body {
-  color: rgb(180, 0, 180);
+  color: rgb(130, 0, 130);
   padding: .5em;
 }
 /*-----------------------------------------------
@@ -115,6 +115,9 @@ p {
 /* ---------------------------------------------
         CAROUSEL
   -------------------------------------------- */
+.intro {
+  font-size: 1.3em;
+}
 .indexContainer {
   display: flex;
   flex-direction: column;
@@ -332,6 +335,10 @@ max-width: 15em;
   /* ---------------------------------------------
           MEDIA QUERY CAROUSEL
     -------------------------------------------- */
+.intro {
+  width: 90%;
+  font-size: 1em;
+}
 .indexContainer {
   padding-top: .5em;
   padding-bottom: .5em;
@@ -376,8 +383,8 @@ max-width: 15em;
 /* ---------------------------------------------
         MEDIA QUERY EDIT PAGE
   -------------------------------------------- */
-.showContainer {
-  margin-top: -7em;
+.insideContainer {
+  /* margin-top: -7em; */
 }
 
 

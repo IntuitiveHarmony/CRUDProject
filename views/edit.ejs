@@ -36,7 +36,7 @@
   <div ='insideContainer'>
     <img src="<%=item.img%>" alt="<%= item.name %>" class ='imgShow'><br>
   </div>
-    <div ='insideContainer'>
+    <div class='insideContainer'>
     <form action="/edit/<%=item.id%>?_method=PUT" method="post">
       <input type="text" name="name" value="<%=item.name%>" placeholder ='Name:'><br>
       <input type="text" name="img" value="<%=item.img%>" placeholder ='Img url:'><br>
