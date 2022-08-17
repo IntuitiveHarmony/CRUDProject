@@ -53,19 +53,19 @@ p {
   margin-left: -.5em;
   font-size: 2.8em;
   line-height: 1.6em;
-  color: rgba(0, 135, 255);
-  text-shadow: 2px 3px rgba(255, 80, 0, 0.8);
+  color: rgba(0, 180, 255);
+  text-shadow: 2px 2px rgba(180, 0, 140);
   font-family: 'Rock Salt';
   letter-spacing: .06em;
   display: inline-block;
 }
 .tagLine {
-  margin-left: 6em;
-  margin-top: -2em;
+  margin-left: 4.2em;
+  margin-top: -1.6em;
   font-family: 'Rock Salt';
   font-size: 1.5em;
-  color: rgba(0, 135, 255);
-  text-shadow: 1px 2px rgba(255, 80, 0, 0.8);
+  color: rgba(0, 180, 255);
+  text-shadow: 2px 2px rgba(180, 0, 140);
 }
 .break {
   flex-basis: 100%;
@@ -269,11 +269,12 @@ max-width: 15em;
   body {
     background-size: 120% auto;
   }
+  /* ---------------------------------------------
+          MEDIA QUERY HEADER
+    -------------------------------------------- */
   .header {
     margin-left:;
     font-size: 1.6em;
-    color: rgba(255, 25, 60 , 1);
-    text-shadow: 2px 3px rgba(0, 180, 255);
     font-family: 'Rock Salt';
     letter-spacing: .06em;
     display: inline-block;
@@ -283,12 +284,14 @@ max-width: 15em;
     margin-top: -1.7em;
     font-family: 'Rock Salt';
     font-size: .8em;
-    color: rgba(255, 50, 0, 1);
-    text-shadow: 1px 2px rgba(0, 180, 255);
+    text-shadow: 1px 1px rgba(180, 0, 140);
   }
   .kingfisher {
-    width: 6em;
+    width: 8em;
   }
+  /* ---------------------------------------------
+          MEDIA QUERY NAV
+    -------------------------------------------- */
   .navContainer {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -311,6 +314,20 @@ max-width: 15em;
   .selected {
     background-color: rgba(226, 89, 255, 1);
   }
+  /* ---------------------------------------------
+          MEDIA QUERY COLLECTIONS PAGE
+    -------------------------------------------- */
+.cardContainer {
+  width: 100%;
+  padding: 0em;
+}
+.card {
+  margin: .5em;
+}
+.cardImg {
+  width: 4em;
+  height: 4em;
+}
   /* ---------------------------------------------
           MEDIA QUERY CAROUSEL
     -------------------------------------------- */
@@ -335,7 +352,26 @@ max-width: 15em;
 .btnContainerRight {
   margin-left: -3em;
 }
-
+/* ---------------------------------------------
+        MEDIA QUERY SHOW PAGE
+  -------------------------------------------- */
+.crudContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -1.5em;
+}
+.crudForm {
+  margin: .1em;
+}
+.crudBtn {
+  padding: .2em;
+}
+.imgShow {
+  border-radius: 6px;
+  width: 10em;
+  border: solid purple 1px;
+  box-shadow: 3px 1px 20px 1px purple;
+}
 
 
 
