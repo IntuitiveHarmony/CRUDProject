@@ -100,7 +100,7 @@ let currentImgIndex = 0
 //  Length of carousel
 let numOfImages = $(`.slideContainer`).children().length - 1
 //  Scroll right through pictures hiding current one and display next
-$('.rightBtn').on('click', () => {
+$('.btnContainerRight').on('click', () => {
   $(`.slideContainer`).children()
     .eq(currentImgIndex)
     .css(`display`, `none`)
@@ -115,7 +115,7 @@ $(`.slideContainer`).children()
   .css(`display`, `block`)
   })
 //  Scroll left through pictures hiding current one and display previous
-$('.leftBtn').on('click', () => {
+$('.btnContainerLeft').on('click', () => {
   $('.slideContainer').children()
     .eq(currentImgIndex)
     .css('display', 'none')
@@ -141,6 +141,7 @@ $(() => {
   $(`.hoodiesBtn`).on(`click`, showHoodies)
   $(`.kidsBtn`).on(`click`, showKids)
   $(`.miscBtn`).on(`click`, showMisc)
+  
   //-----------------------------------------------
   //        HOVER OVER BUTTONS/LINKS
   //-----------------------------------------------

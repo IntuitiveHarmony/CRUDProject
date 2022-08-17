@@ -138,9 +138,14 @@ router.get('/show/:id', (req, res) => {
 
 
 //-----------------------------------------------
-//       DELETE ROUTE
+//       DELETE ROUTES
 //-----------------------------------------------
 router.delete('/show/:id', (req, res) => {
+    Schema.findByIdAndRemove(req.params.id, (err, deleted) =>{
+        res.redirect('/collections')
+    })
+})
+router.delete('/edit/:id', (req, res) => {
     Schema.findByIdAndRemove(req.params.id, (err, deleted) =>{
         res.redirect('/collections')
     })

@@ -30,6 +30,9 @@ input {
 select {
   margin: .5em;
 }
+p {
+  margin: 0;
+}
 /* ---------------------------------------------
         HEADER
   -------------------------------------------- */
@@ -76,6 +79,7 @@ select {
   flex-wrap: wrap;
 }
 .navLink {
+  line-height: 3em;
   padding: .4em;
   border-radius: 6px;
   border: solid rgba(255, 0, 255, .6) 1px;
@@ -91,6 +95,7 @@ select {
 .collectionNav {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 1.4em;
 }
 .collectionLink {
   padding: .4em;
@@ -109,29 +114,61 @@ select {
 /* ---------------------------------------------
         CAROUSEL
   -------------------------------------------- */
+.indexContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border-radius: 1em;
+  padding: 1.5em;
+  background-image: linear-gradient(to bottom right, rgba(255, 0, 255, 0.5), rgba(0,255 ,250,.4), rgba(244, 255, 0, 0.6), rgba(255, 101, 0, 0.4) );
+}
+.btnContainerLeft {
+  display: block;
+  margin-right: -3em;
+  z-index: 2;
+}
+.btnContainerRight {
+  display: block;
+  margin-left: -3em;
+  z-index: 2;
+}
+.lnr-arrow-left-circle { /*These buttons came from https://linearicons.com/free */
+  color: RGB(255, 20, 147);
+  font-size: 45px;
+  display: ;
+  align-self: center;
+}
+.lnr-arrow-right-circle {  /*These buttons came from https://linearicons.com/free */
+  color: RGB(255, 20, 147);
+  font-size: 45px;
+  display:;
+  align-self: center;
+}
 .carouselContainer {
-  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   margin-top: 2em;
   border-radius: 1em;
   padding: 1.5em;
-    background-image: linear-gradient(to bottom right, rgba(255, 0, 255, 0.5), rgba(0,255 ,250,.4), rgba(244, 255, 0, 0.6), rgba(255, 101, 0, 0.4) );
 }
 .slideContainer {
-  width: 100%;
+  display: flex;
+  /* width: 100%; */
 }
-.slideContainer img {
+.slideContainer a {
   display: none;
 }
-.slide img:first-of-type {
+.slide a:first-of-type {
 max-width: 15em;
 }
 .slide {
   border-radius: 100%;
-  width: 100%;
+  width: 26em;
   border: solid purple 1px;
   box-shadow: 3px 1px 20px 1px purple;
 }
-.slideContainer img:first-of-type{
+.slideContainer a:first-of-type{
   display: block;
 }
 
@@ -144,7 +181,7 @@ max-width: 15em;
 }
 .crudContainer {
   display: flex;
-  margin-top: -3.5em;
+  margin-top: -1.5em;
 }
 .secret {
   /* display: none; */
@@ -268,13 +305,36 @@ max-width: 15em;
     background-color: rgba(0, 180, 255);
     text-decoration: none;
   }
+  .collectionNav {
+    margin-left: .8em;
+  }
   .selected {
     background-color: rgba(226, 89, 255, 1);
   }
-
-
-
-
+  /* ---------------------------------------------
+          MEDIA QUERY CAROUSEL
+    -------------------------------------------- */
+.indexContainer {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  width: 90%;
+}
+.slide {
+  border-radius: 100%;
+  width: 17em;
+  border: solid purple 1px;
+  box-shadow: 3px 1px 20px 1px purple;
+}
+.carouselContainer {
+  margin-top: .3em;
+  margin-left: -1em;
+}
+.btnContainerLeft {
+  margin-right: -3em;
+}
+.btnContainerRight {
+  margin-left: -3em;
+}
 
 
 
