@@ -7,7 +7,7 @@ const newSchema = new mongoose.Schema ({
     style: {type:String},
     catagory: {type: String},
     price: {type: Number, require: true},
-    tags: [String],
+    tags: {type: [String]},
     archive: {type: Boolean, default: false},
 })
 

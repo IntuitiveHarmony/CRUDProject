@@ -96,7 +96,7 @@ select {
   padding: .4em;
   border-radius: 6px;
   border: solid rgba(255, 0, 255, .6) 1px;
-  margin: 1em;
+  margin: .3em;
   color: white;
   background-color: rgba(226, 89, 255, .4);
   text-decoration: none;
@@ -109,12 +109,33 @@ select {
 /* ---------------------------------------------
         CAROUSEL
   -------------------------------------------- */
-.slide :first-of-type {
-  max-width: 15em;
+.carouselContainer {
+  width: 45%;
+  margin-top: 2em;
+  border-radius: 1em;
+  padding: 1.5em;
+    background-image: linear-gradient(to bottom right, rgba(255, 0, 255, 0.5), rgba(0,255 ,250,.4), rgba(244, 255, 0, 0.6), rgba(255, 101, 0, 0.4) );
 }
-.slide {
+.slideContainer {
+  width: 100%;
+}
+.slideContainer img {
   display: none;
 }
+.slide img:first-of-type {
+max-width: 15em;
+}
+.slide {
+  border-radius: 100%;
+  width: 100%;
+  border: solid purple 1px;
+  box-shadow: 3px 1px 20px 1px purple;
+}
+.slideContainer img:first-of-type{
+  display: block;
+}
+
+
 /* ---------------------------------------------
         SHOW PAGE
   -------------------------------------------- */
@@ -204,7 +225,6 @@ select {
   background-color: rgba(0, 180, 255);
   text-decoration: none;
 }
-
 /*-----------------------------------------------
       MEDIA QUERIES
 -----------------------------------------------*/
@@ -213,7 +233,7 @@ select {
     background-size: 120% auto;
   }
   .header {
-    margin-left:.2em;
+    margin-left:;
     font-size: 1.6em;
     color: rgba(255, 25, 60 , 1);
     text-shadow: 2px 3px rgba(0, 180, 255);
@@ -222,10 +242,10 @@ select {
     display: inline-block;
   }
   .tagLine {
-    margin-left: 2em;
+    margin-left: 5.5em;
     margin-top: -1.7em;
     font-family: 'Rock Salt';
-    font-size: .7em;
+    font-size: .8em;
     color: rgba(255, 50, 0, 1);
     text-shadow: 1px 2px rgba(0, 180, 255);
   }
@@ -234,14 +254,15 @@ select {
   }
   .navContainer {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     width: 75%;
   }
   .navLink {
+    line-height: 2.5em;
     padding: .4em;
     border-radius: 6px;
     border: solid rgba(255, 0, 255, .6) 1px;
-    margin: 1em;
+    margin: .3em;
     margin-bottom: 10em;
     color: white;
     background-color: rgba(0, 180, 255);

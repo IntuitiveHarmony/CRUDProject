@@ -92,6 +92,43 @@ const showMisc = () => {
   $(`.hoodiesBtn`).removeClass(`selected`)
 }
 
+//-----------------------------------------------
+//        CAROUSEL
+//-----------------------------------------------
+//  Count steps in picture carousel
+let currentImgIndex = 0
+//  Length of carousel
+let numOfImages = $(`.slideContainer`).children().length - 1
+//  Scroll right through pictures hiding current one and display next
+$('.rightBtn').on('click', () => {
+  $(`.slideContainer`).children()
+    .eq(currentImgIndex)
+    .css(`display`, `none`)
+//  Loop back through to first Picture at the end of list
+if(currentImgIndex < numOfImages) {
+  currentImgIndex ++
+  } else {
+    currentImgIndex = 0
+  }
+$(`.slideContainer`).children()
+  .eq(currentImgIndex)
+  .css(`display`, `block`)
+  })
+//  Scroll left through pictures hiding current one and display previous
+$('.leftBtn').on('click', () => {
+  $('.slideContainer').children()
+    .eq(currentImgIndex)
+    .css('display', 'none')
+//  Loop back through to first Picture at the end of list
+if(currentImgIndex > 0) {
+  currentImgIndex --
+  } else {
+    currentImgIndex = numOfImages
+  }
+$('.slideContainer').children()
+    .eq(currentImgIndex)
+      .css('display', 'block')
+})
 
 $(() => {
   //-----------------------------------------------
@@ -117,6 +154,10 @@ $(() => {
       }, function() {
         $(this).removeClass(`focus`).removeAttr(`id`, `current`)
     })
+
+
+
+
 })
 
 
