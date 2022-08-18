@@ -47,7 +47,6 @@ p {
 }
 .kingfisher {
   width: 12em;
-  height: auto;
 }
 .header {
   margin-top: 1em;
@@ -78,6 +77,7 @@ p {
 .navContainer {
   display: flex;
   flex-wrap: wrap;
+  margin-top: -2em;
 }
 .navLink {
   line-height: 3em;
@@ -300,6 +300,7 @@ body {
   display: flex;
   flex-wrap: wrap-reverse;
   width: 75%;
+  margin-top: -.7em;
 }
 .navLink {
   line-height: 2.5em;
