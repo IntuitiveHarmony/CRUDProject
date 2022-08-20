@@ -8,9 +8,11 @@ I made my CRUD app with a specific user in mind.  I met a person recently who st
 ## Tech Used
 This app is made using Node, Express, AtlasDB, Mongoose and was launched using Heroku.
 
+## Resolved Issues
+- Link domain name kingfishertiedye.com with the app (8/20/22)
+
 ## Unsolved Issues/ Future Upgrades
 Here is a list of Items I'd like to address before this is officially launched.
-- Link domain name kingfishertiedye.com with the app
 - Add social media links
 - Add checkout feature
 - Secure the site properly enough to have checkout feature
@@ -30,3 +32,4 @@ Here is a list of Items I'd like to address before this is officially launched.
 - Make logo smaller (and cuter)
 - Clean up CSS to make sure each page feels consistent (looking at you, new, edit and show pages)
 - Fix the background to never cut off and/ or parallax
+- Require some of the fields in the forms to be filled out so blank entries wont occur
