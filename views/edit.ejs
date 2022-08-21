@@ -15,7 +15,7 @@
 <!-- DELETE BUTTON                         -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <form action="<%=item.id%>?_method=DELETE" method="post" class='showStat'>
-      <input type='submit' class ='shortLink navLink' value ='DELETE ITEM' onClick="return confirm('Are you sure you want to delete <%= item.name %>?  This action cannot be undone')">
+      <input type='submit' class ='shortLink navLink' value ='DELETE ITEM' onClick="return confirm('Are you sure you want to delete <%= item.name %>?')">
     </form>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -39,12 +39,15 @@
   </div>
     <div class='insideContainer'>
     <form action="/edit/<%=item.id%>?_method=PUT" method="post">
+      <label>Name:</label>
       <input type="text" name="name" value="<%=item.name%>" placeholder ='Name:'><br>
       <input type="text" name="img" value="<%=item.img%>" placeholder ='Img url:'><br>
+      <label>Size:</label>
       <input type="text" name="size" value="<%=item.size%>" placeholder ='Size:'><br>
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
       <!-- CATAGORY DROPDOWN WITH VALUE POPULATED   -->
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <label>Catagory:</label>
       <select type="text" name="catagory" id='catagoryDrop' onchange='filterStyle()' value="<%=item.catagory%>"><br>
         <option value="" disabled selected>Catagory:</option>
         <%  let sShirts = ''
@@ -76,6 +79,7 @@
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
       <!-- STYLE DROPDOWN BASED ON CATAGORY      -->
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <label>Style:</label>
       <select name ='style' id='filter' type='text'>
         <option value='' disabled selected>Style:</option>
         <option value="tShirt" class="shirtsD">T-Shirt</option>
@@ -95,8 +99,9 @@
         <option value="kidPants" class="kidsD">Kids Pants</option>
       </select></br>
 
-
+      <label>Price: $</label>
       <input type="text" name="price" value="<%=item.price%>" placeholder ='Price: (number only)'><br>
+      <label>Tags:</label>
       <input type='array' name='tags' value='<%=item.tags%>' placeholder ='Tag, Tag, Tag'><br>
       <input type="submit" class ='navLink shortLink ' value="Submit Changes" >
     </form>

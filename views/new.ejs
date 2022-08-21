@@ -9,15 +9,15 @@
   </header>
   <div class='mainContainer'>
   <h1>Add New Item</h1>
-  <form action='/upload' class='formBtn' enctype="multipart/form-data" method='POST'>
-    <input type='file' name ='picFile' >
+  <form action='/upload' class='formBtn' enctype="multipart/form-data" method='POST' name ='photo'>
+    <input type='file' name ='image' >
     <input type='submit'  value ='UPLOAD'>
   </form>
     <form action='/new/' method='POST'>
-      <input type="text" name="name" placeholder='name'/><br/>
+      <input type="text" name="name" placeholder='name'required/><br/>
       <input type="text" name="img" placeholder='img url'/><br/>
       <input type="text" name="size" placeholder='size'/><br/>
-      <select type="text" name="catagory" id='catagoryDrop' onchange='filterStyle()'><br>
+      <select type="text" name="catagory" id='catagoryDrop' onchange='filterStyle()' required><br>
         <option value="" disabled selected>Catagory:</option>
         <option value="shirts" >Shirts</option>
         <option value="pants" >Pants</option>

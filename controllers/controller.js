@@ -4,54 +4,33 @@ const methodOverride  = require('method-override');
 const Schema = require('../models/schema.js')
 const app = express ();
 
-//--------------------- upload trial 1--------------------
-// const morgan = require('morgan')
-// const multer = require('multer');
-// const upload = multer({dest: 'public/images/phots/'});
-//
-// app.use(express.json());
-// // app.use(express.urlencoded({extended: true}));
-// app.use(morgan('dev'));
+//-------~~~~~~~~~~~~~~~~~~~~~~~~~~
+const path = require('path')
+const multer = require('multer')
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, './public/images/photos/')
+  },
+  filename: (req, file, cb) => {
+    console.log(file)
+    cb(null, Date.now() + path.extname(file.originalname))
+  }
+})
 
-// app.use(express.static(__dirname, 'public'));
-//--------------------------------------------------------
-
-//trial 2
-const multer = require('multer');
-// const imageStorage = multer.diskStorage({
-//     // Destination to store image
-//     destination: 'images',
-//       filename: (req, file, cb) => {
-//           cb(null, file.fieldname + '_' + Date.now()
-//              + path.extname(file.originalname))
-//             // file.fieldname is name of the field (image)
-//             // path.extname get the uploaded file extension
-//     }
-// });
+const upload = multer({storage: storage})
 
 
 
 app.use(methodOverride('_method'))
 
-//-----------------------------------------------
-//       Upload ROUTE  trial 1
-//-----------------------------------------------
-// router.post('/upload', upload.single('file'), (req, res) => {
-//   if (!req.file) {
-//     console.log("No file received");
-//     return res.send({
-//       success: false
-//     });
-//
-//   } else {
-//     console.log('file received');
-//     return res.send({
-//       success: true
-//     })
-//   }
-// });
 
 
+//-----------------------------------------------
+//        UPLOAD ROUTE ~~~~~~~~~~~~~~~
+//-----------------------------------------------
+router.post('/upload', upload.single('image'), (req, res) => {
+  res.redirect('/new')
+})
 
 //-----------------------------------------------
 //        POST ROUTE
