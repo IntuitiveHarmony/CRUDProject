@@ -7,6 +7,7 @@
   <header>
     <%-include('./partials/nav.ejs')%>
   </header>
+
   <div class ='mainContainer'>
   <h2 class='showHeader'>Edit: <%= item.name %></h2>
   <div class='crudContainer'>
@@ -41,7 +42,6 @@
       <input type="text" name="name" value="<%=item.name%>" placeholder ='Name:'><br>
       <input type="text" name="img" value="<%=item.img%>" placeholder ='Img url:'><br>
       <input type="text" name="size" value="<%=item.size%>" placeholder ='Size:'><br>
-      <input type="text" name="style" value="<%=item.style%>" placeholder ='Style:'><br>
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
       <!-- CATAGORY DROPDOWN WITH VALUE POPULATED   -->
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -76,7 +76,7 @@
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
       <!-- STYLE DROPDOWN BASED ON CATAGORY      -->
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-      <select name ='style' id='filter' type='text' class='cascade'>
+      <select name ='style' id='filter' type='text'>
         <option value='' disabled selected>Style:</option>
         <option value="tShirt" class="shirtsD">T-Shirt</option>
         <option value="vNeck" class="shirtsD">V-Neck</option>

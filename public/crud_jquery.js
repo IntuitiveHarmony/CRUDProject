@@ -97,7 +97,7 @@ const showMisc = () => {
 //-----------------------------------------------
 const filterStyle = () => {
   let catagoryDrop = $('#catagoryDrop').find('option:selected').text()
-  
+
   if (catagoryDrop === 'Shirts') {
     $(`.shirtsD`).removeClass(`hidden`)
     $(`.hoodiesD`).addClass(`hidden`)
@@ -201,6 +201,11 @@ $(() => {
   $(`.hoodiesBtn`).on(`click`, showHoodies)
   $(`.kidsBtn`).on(`click`, showKids)
   $(`.miscBtn`).on(`click`, showMisc)
+
+  //-----------------------------------------------
+  //       FILTER THE STYLES ON EDIT PAGE (1ST TIME)
+  //-----------------------------------------------
+  $(`#filter`).hover(filterStyle)
 
   //-----------------------------------------------
   //        HOVER OVER BUTTONS/LINKS
