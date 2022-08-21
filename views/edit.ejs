@@ -3,7 +3,7 @@
 <head>
     <%-include('./partials/head.ejs')%>
 </head>
-<body>
+<body onload ='filterStyle()'>
   <header>
     <%-include('./partials/nav.ejs')%>
   </header>
@@ -34,7 +34,7 @@
 
 </div>
   <div class ='showContainer'>
-  <div ='insideContainer'>
+  <div class ='insideContainer'>
     <img src="<%=item.img%>" alt="<%= item.name %>" class ='imgShow'><br>
   </div>
     <div class='insideContainer'>

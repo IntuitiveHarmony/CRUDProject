@@ -205,7 +205,8 @@ $(() => {
   //-----------------------------------------------
   //       FILTER THE STYLES ON EDIT PAGE (1ST TIME)
   //-----------------------------------------------
-  $(`#filter`).hover(filterStyle)
+  // $(`#filter`).hover(filterStyle)
+  // $(`#filter`).on(`click`, filterStyle)
 
   //-----------------------------------------------
   //        HOVER OVER BUTTONS/LINKS
