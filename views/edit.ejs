@@ -14,7 +14,7 @@
 <!-- DELETE BUTTON                         -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <form action="<%=item.id%>?_method=DELETE" method="post" class='showStat'>
-      <input type='submit' class ='shortLink navLink' value ='DELETE ITEM'>
+      <input type='submit' class ='shortLink navLink' value ='DELETE ITEM' onClick="return confirm('Are you sure you want to delete <%= item.name %>?  This action cannot be undone')">
     </form>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -42,10 +42,10 @@
       <input type="text" name="img" value="<%=item.img%>" placeholder ='Img url:'><br>
       <input type="text" name="size" value="<%=item.size%>" placeholder ='Size:'><br>
       <input type="text" name="style" value="<%=item.style%>" placeholder ='Style:'><br>
-      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-      <!-- DROP DOWN MENU WITH VALUE POPULATED   -->
-      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-      <select type="text" name="catagory" value="<%=item.catagory%>"><br>
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <!-- CATAGORY DROPDOWN WITH VALUE POPULATED   -->
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <select type="text" name="catagory" id='catagoryDrop' onchange='filterStyle()' value="<%=item.catagory%>"><br>
         <option value="" disabled selected>Catagory:</option>
         <%  let sShirts = ''
             let sPants = ''
@@ -66,9 +66,6 @@
             } else if (item.catagory === 'misc') {
               sMisc = 'selected'
             } else {}%>
-
-
-
         <option value="shirts" <%= sShirts %> >Shirts</option>
         <option value="pants" <%= sPants %> >Pants</option>
         <option value="skirts" <%= sSkirts %> >Skirts/ Dresses</option>
@@ -76,6 +73,29 @@
         <option value="kids" <%= sKids %> >Kids</option>
         <option value="misc" <%= sMisc %> >Misc</option>
       </select><br>
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <!-- STYLE DROPDOWN BASED ON CATAGORY      -->
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <select name ='style' id='filter' type='text' class='cascade'>
+        <option value='' disabled selected>Style:</option>
+        <option value="tShirt" class="shirtsD">T-Shirt</option>
+        <option value="vNeck" class="shirtsD">V-Neck</option>
+        <option value="tankTop" class="shirtsD">Tank Top</option>
+
+        <option value="pullOver" class="hoodiesD">Pull Over</option>
+        <option value="zipUp" class="hoodiesD">Zip Up</option>
+
+        <option value="yoga" class="pantsD">Yoga</option>
+
+        <option value="skirt" class="skirtsD">Skirt</option>
+        <option value="dress" class="skirtsD">Dress</option>
+
+        <option value="onsie" class="kidsD">Onsie</option>
+        <option value="kidShirt" class="kidsD">Kids Shirt</option>
+        <option value="kidPants" class="kidsD">Kids Pants</option>
+      </select></br>
+
+
       <input type="text" name="price" value="<%=item.price%>" placeholder ='Price: (number only)'><br>
       <input type='array' name='tags' value='<%=item.tags%>' placeholder ='Tag, Tag, Tag'><br>
       <input type="submit" class ='navLink shortLink ' value="Submit Changes" >

@@ -93,6 +93,66 @@ const showMisc = () => {
 }
 
 //-----------------------------------------------
+//    FILTER STYLES DROPDOWN BASED ON CATAGORY
+//-----------------------------------------------
+const filterStyle = () => {
+  let catagoryDrop = $('#catagoryDrop').find('option:selected').text()
+  
+  if (catagoryDrop === 'Shirts') {
+    $(`.shirtsD`).removeClass(`hidden`)
+    $(`.hoodiesD`).addClass(`hidden`)
+    $(`.pantsD`).addClass(`hidden`)
+    $(`.skirtsD`).addClass(`hidden`)
+    $(`.kidsD`).addClass(`hidden`)
+    $(`.miscD`).addClass(`hidden`)
+
+  } else if (catagoryDrop === 'Pants') {
+    $(`.pantsD`).removeClass(`hidden`)
+    $(`.hoodiesD`).addClass(`hidden`)
+    $(`.shirtsD`).addClass(`hidden`)
+    $(`.skirtsD`).addClass(`hidden`)
+    $(`.kidsD`).addClass(`hidden`)
+    $(`.miscD`).addClass(`hidden`)
+
+  } else if (catagoryDrop === 'Hoodies') {
+    $(`.hoodiesD`).removeClass(`hidden`)
+    $(`.pantsD`).addClass(`hidden`)
+    $(`.shirtsD`).addClass(`hidden`)
+    $(`.skirtsD`).addClass(`hidden`)
+    $(`.kidsD`).addClass(`hidden`)
+    $(`.miscD`).addClass(`hidden`)
+
+  } else if (catagoryDrop === 'Skirts/ Dresses') {
+    $(`.skirtsD`).removeClass(`hidden`)
+    $(`.pantsD`).addClass(`hidden`)
+    $(`.shirtsD`).addClass(`hidden`)
+    $(`.hoodiesD`).addClass(`hidden`)
+    $(`.kidsD`).addClass(`hidden`)
+    $(`.miscD`).addClass(`hidden`)
+
+  } else if (catagoryDrop === 'Kids') {
+    $(`.kidsD`).removeClass(`hidden`)
+    $(`.pantsD`).addClass(`hidden`)
+    $(`.shirtsD`).addClass(`hidden`)
+    $(`.hoodiesD`).addClass(`hidden`)
+    $(`.skirtsD`).addClass(`hidden`)
+    $(`.miscD`).addClass(`hidden`)
+
+  } else if (catagoryDrop === 'Misc') {
+    $(`.miscD`).removeClass(`hidden`)
+    $(`.pantsD`).addClass(`hidden`)
+    $(`.shirtsD`).addClass(`hidden`)
+    $(`.hoodiesD`).addClass(`hidden`)
+    $(`.skirtsD`).addClass(`hidden`)
+    $(`.kidsD`).addClass(`hidden`)
+  } else {
+    return
+  }
+
+
+}
+
+//-----------------------------------------------
 //        CAROUSEL
 //-----------------------------------------------
 //  Count steps in picture carousel
@@ -141,7 +201,7 @@ $(() => {
   $(`.hoodiesBtn`).on(`click`, showHoodies)
   $(`.kidsBtn`).on(`click`, showKids)
   $(`.miscBtn`).on(`click`, showMisc)
-  
+
   //-----------------------------------------------
   //        HOVER OVER BUTTONS/LINKS
   //-----------------------------------------------

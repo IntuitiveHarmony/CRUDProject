@@ -10,6 +10,7 @@ This app is made using Node, Express, AtlasDB, Mongoose and was launched using H
 
 ## Resolved Issues
 - Link domain name kingfishertiedye.com with the app (8/20/22)
+- Add confirm before delete function
 
 ## Unsolved Issues/ Future Upgrades
 Here is a list of Items I'd like to address before this is officially launched.
@@ -19,7 +20,6 @@ Here is a list of Items I'd like to address before this is officially launched.
 - Create single login for business owner that will grant access to adding, editing, archiving and deleting items
 - Update static content to reflect business owner's vision
 - Teach business owner how to use the app (flash back to teaching my parents how to program the clock on the VCR)
-- Add confirm before delete function
 - Show error if item doesn't upload or edit correctly
 - Have the carousel on index page auto Scroll
 - Fix image upload button add size and quality checks, upload multiple item images for show page carousel

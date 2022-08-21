@@ -18,15 +18,37 @@
       <input type="text" name="img" placeholder='img url'/><br/>
       <input type="text" name="size" placeholder='size'/><br/>
       <input type="text" name="style" placeholder='style'/><br/>
-      <select type="text" name="catagory" ><br>
+      <select type="text" name="catagory" id='catagoryDrop' onchange='filterStyle()'><br>
         <option value="" disabled selected>Catagory:</option>
         <option value="shirts" >Shirts</option>
         <option value="pants" >Pants</option>
-        <option value="skirts" >Skirts</option>
-        <option value="hoodies" >Hoodie</option>
+        <option value="skirts" >Skirts/ Dresses</option>
+        <option value="hoodies" >Hoodies</option>
         <option value="kids" >Kids</option>
         <option value="misc" >Misc</option>
       </select><br>
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <!-- STYLE DROPDOWN BASED ON CATAGORY      -->
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <select name ='style' id='filter' type='text' class='cascade'>
+        <option value='' disabled selected>Style:</option>
+        <option value="tShirt" class="shirtsD">T-Shirt</option>
+        <option value="vNeck" class="shirtsD">V-Neck</option>
+        <option value="tankTop" class="shirtsD">Tank Top</option>
+
+        <option value="pullOver" class="hoodiesD">Pull Over</option>
+        <option value="zipUp" class="hoodiesD">Zip Up</option>
+
+        <option value="yoga" class="pantsD">Yoga</option>
+
+        <option value="skirt" class="skirtsD">Skirt</option>
+        <option value="dress" class="skirtsD">Dress</option>
+
+        <option value="onsie" class="kidsD">Onsie</option>
+        <option value="kidShirt" class="kidsD">Kids Shirt</option>
+        <option value="kidPants" class="kidsD">Kids Pants</option>
+      </select></br>
+
       <input type="text" name="price" placeholder='price'/><br/>
       <input type="array" name="tags" placeholder='tag, tag, tag'/><br/>
       <input type='submit' class ='navLink' value='Add Item To Collection'>
