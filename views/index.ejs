@@ -13,17 +13,17 @@
   <div class ='carouselContainer'>
 
     <div class ='btnContainerLeft'>
-      <div class ='lnr lnr-arrow-left-circle'>
+      <div class ='lnr lnr-arrow-left-circle link'>
       </div>
     </div>
     <div class = 'slideContainer'>
     <%for (let i = 0; i < 7; i++) {
       let randomNumber = Math.floor(Math.random()*item.length) %>
-      <a href ='/show/<%= item[randomNumber]._id %>'><img src ='<%= item[randomNumber].img %>' class ='slide' alt ='<%= item[randomNumber].name %>'></a>
+      <a  href ='/show/<%= item[randomNumber]._id %>'><img src ='<%= item[randomNumber].img %>' class ='slide link' alt ='<%= item[randomNumber].name %>'></a>
       <% } %>
     </div>
     <div class ='btnContainerRight'>
-      <div class ='lnr lnr-arrow-right-circle'>
+      <div class ='lnr lnr-arrow-right-circle link'>
       </div>
     </div>
   </div>

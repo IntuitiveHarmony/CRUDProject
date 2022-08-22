@@ -8,7 +8,7 @@ body {
 body::after {
   content: "";
   background: url('/images/inkBackgroundink2.png');
-  background-size: 101%;
+  background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.3;
   top: 0;
@@ -271,7 +271,10 @@ max-width: 15em;
 -----------------------------------------------*/
 @media only screen and (max-width: 600px) {
 body {
-  background-size: 120% auto;
+  /* background-size: 120% auto; */
+}
+body:after {
+  background-size: cover;
 }
 /* ---------------------------------------------
           MEDIA QUERY HEADER

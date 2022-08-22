@@ -160,7 +160,7 @@ let currentImgIndex = 0
 //  Length of carousel
 let numOfImages = $(`.slideContainer`).children().length - 1
 //  Scroll right through pictures hiding current one and display next
-$('.btnContainerRight').on('click', () => {
+$('.lnr-arrow-right-circle').on('click', () => {
   $(`.slideContainer`).children()
     .eq(currentImgIndex)
     .css(`display`, `none`)
@@ -175,7 +175,7 @@ $(`.slideContainer`).children()
   .css(`display`, `block`)
   })
 //  Scroll left through pictures hiding current one and display previous
-$('.btnContainerLeft').on('click', () => {
+$('.lnr-arrow-left-circle').on('click', () => {
   $('.slideContainer').children()
     .eq(currentImgIndex)
     .css('display', 'none')
@@ -201,6 +201,7 @@ $(() => {
   $(`.hoodiesBtn`).on(`click`, showHoodies)
   $(`.kidsBtn`).on(`click`, showKids)
   $(`.miscBtn`).on(`click`, showMisc)
+  $(`.link`).css(`cursor`, `pointer`)
 
   //-----------------------------------------------
   //       FILTER THE STYLES ON EDIT PAGE (1ST TIME)

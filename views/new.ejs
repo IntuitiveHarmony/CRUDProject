@@ -11,13 +11,13 @@
   <h1>Add New Item</h1>
   <form action='/upload' class='formBtn' enctype="multipart/form-data" method='POST' name ='photo'>
     <input type='file' name ='image' >
-    <input type='submit'  value ='UPLOAD'>
+    <input type='submit' class='link' value ='UPLOAD'>
   </form>
     <form action='/new/' method='POST'>
       <input type="text" name="name" placeholder='name'required/><br/>
       <input type="text" name="img" placeholder='img url'/><br/>
       <input type="text" name="size" placeholder='size'/><br/>
-      <select type="text" name="catagory" id='catagoryDrop' onchange='filterStyle()' required><br>
+      <select type="text" name="catagory" class='link' id='catagoryDrop' onchange='filterStyle()' required><br>
         <option value="" disabled selected>Catagory:</option>
         <option value="shirts" >Shirts</option>
         <option value="pants" >Pants</option>
@@ -29,7 +29,7 @@
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
       <!-- STYLE DROPDOWN BASED ON CATAGORY      -->
       <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-      <select name ='style' id='filter' type='text'>
+      <select name ='style' class='link' id='filter' type='text'>
         <option value='' disabled selected>Style:</option>
         <option value="tShirt" class="shirtsD">T-Shirt</option>
         <option value="vNeck" class="shirtsD">V-Neck</option>
@@ -50,10 +50,10 @@
 
       <input type="text" name="price" placeholder='price'/><br/>
       <input type="array" name="tags" placeholder='tag, tag, tag'/><br/>
-      <input type='submit' class ='navLink' value='Add Item To Collection'>
+      <input type='submit' class ='navLink link' value='Add Item To Collection'>
     </form>
     <form action="/" method="">
-      <input type='submit' class ='navLink' value ='CANCEL'>
+      <input type='submit' class ='navLink link' value ='CANCEL'>
     </form>
 </div>
 
