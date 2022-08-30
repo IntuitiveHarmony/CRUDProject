@@ -33,3 +33,5 @@ Here is a list of Items I'd like to address before this is officially launched.
 - Clean up CSS to make sure each page feels consistent (looking at you, new, edit and show pages)
 - Fix the background to never cut off and/ or parallax
 - Require some of the fields in the forms to be filled out so blank entries wont occur
+
+-kids, 
