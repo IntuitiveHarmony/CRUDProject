@@ -14,19 +14,25 @@ This app is made using Node, Express, AtlasDB, Mongoose and was launched using H
 
 ## Unsolved Issues/ Future Upgrades
 Here is a list of Items I'd like to address before this is officially launched.
-- Add social media links
-- Add checkout feature
-- Secure the site properly enough to have checkout feature
+- Add social media links https://www.instagram.com/kingfishertiedye/, phone number, Dharma trading co
+- SEO
 - Create single login for business owner that will grant access to adding, editing, archiving and deleting items
-- Update static content to reflect business owner's vision
-- Teach business owner how to use the app (flash back to teaching my parents how to program the clock on the VCR)
+- Update static content to reflect business owner's vision - color therapy, incoperate woods in background
+- 
+- Teach business owner how to use the app
+- 
 - Show error if item doesn't upload or edit correctly
 - Have the carousel on index page auto Scroll
+-     
 - Fix image upload button add size and quality checks, upload multiple item images for show page carousel
 - Add carousel within the show page
+- 
 - Implement "view full size picture" in show page
 - Have tags be links that will take user to collection page with items that have same tag that is selected  (I think using .slpit() on the tag array will help)
 - Implement more dropdown lists in new and edit pages. Some based on parent lists
+     -long sleve Ts
+     Button down
+     - crew sweatshirt
 - Implement sticky nav for menu on phone version
 - Style the links and buttons especially the ones within text
 - Make logo smaller (and cuter)
